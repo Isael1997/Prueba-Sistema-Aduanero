@@ -1,0 +1,60 @@
+﻿@model WebApplication2.Models.Pedidos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pedidos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPedido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoPedido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoMercancia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoMercancia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Peso)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Peso)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripción)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Descripción)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClienteIdFkNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClienteIdFkNavigation.Apellidos)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.NoPedido">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
